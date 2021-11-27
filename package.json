@@ -33,8 +33,11 @@
     "start": "yarn --cwd=electron run run & yarn --cwd=webview start:webview"
   },
   "lint-staged": {
-    "!(docs/**/*).js": [
+    "!(electron/app/**/*).js": [
       "prettier --write"
+    ],
+    "electron/**/*.ts": [
+      "prettier --parser=typescript --write"
     ],
     "webview/**/*.ts?(x)": [
       "eslint",
