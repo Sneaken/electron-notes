@@ -29,8 +29,8 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "commit": "git-cz",
     "prepare": "husky install",
-    "build": "cd webview && yarn build:webview && cd ../electron && yarn build:dev",
-    "start": "yarn --cwd=electron run run & yarn --cwd=webview start:webview"
+    "build": "yarn --cwd=webview build:webview && yarn --cwd=electron build:dev",
+    "start": "yarn --cwd=webview start:webview & yarn --cwd=electron run run"
   },
   "lint-staged": {
     "!(electron/app/**/*).js": [
