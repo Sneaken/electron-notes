@@ -30,7 +30,7 @@
     "commit": "git-cz",
     "prepare": "husky install",
     "build": "yarn --cwd=webview build:webview && yarn --cwd=electron build:dev",
-    "start": "yarn --cwd=webview start:webview & yarn --cwd=electron run run"
+    "start": "yarn --cwd=webview start:webview & yarn --cwd=electron start"
   },
   "lint-staged": {
     "!(electron/app/**/*).js": [

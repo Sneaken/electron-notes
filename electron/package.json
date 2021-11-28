@@ -8,8 +8,8 @@
     "build:dev": "rollup --config rollup.config.ts --configPlugin typescript",
     "watch": "yarn build:dev --watch",
     "start:electron": "DEBUG_URL=http://localhost:3000 electron .",
+    "start": "yarn start:electron & yarn watch",
     "preview": "electron .",
-    "run": "yarn start:electron & yarn watch",
     "build:mac": "electron-builder --mac",
     "build:win": "electron-builder --win"
   },
