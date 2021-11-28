@@ -9,7 +9,7 @@
     "watch": "yarn build:dev --watch",
     "start:electron": "DEBUG_URL=http://localhost:3000 electron .",
     "preview": "electron .",
-    "run": "yarn watch & yarn start:electron",
+    "run": "yarn start:electron & yarn watch",
     "build:mac": "electron-builder --mac",
     "build:win": "electron-builder --win"
   },
