@@ -1,5 +1,5 @@
 appId: com.example.app
-productName: Sneaken's utils
+productName: Sneaken-notes
 mac:
   target:
     target: dmg

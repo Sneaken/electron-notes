@@ -30,7 +30,7 @@ const editMenu: MenuItemConstructorOptions = {
   submenu: [],
 };
 
-function relaunch () {
+function relaunch() {
   app.relaunch();
   app.quit();
 }
@@ -38,7 +38,7 @@ function relaunch () {
 class Main {
   private window: BrowserWindow | undefined;
 
-  createAppMenu () {
+  createAppMenu() {
     const applicationMenu: MenuItemConstructorOptions = {
       label: 'Application',
       submenu: [
@@ -122,8 +122,7 @@ class Main {
         {
           label: 'Back',
           accelerator: 'CmdOrCtrl+Backspace',
-          click: () => {
-          },
+          click: () => {},
         },
         {
           type: 'separator',
@@ -143,7 +142,7 @@ class Main {
     Menu.setApplicationMenu(Menu.buildFromTemplate([applicationMenu, editMenu, viewMenu]));
   }
 
-  createWindow () {
+  createWindow() {
     const window = new BrowserWindow({
       ...windowOptions,
       width: 1280,
@@ -170,8 +169,7 @@ class Main {
       try {
         // electron 的 热加载
         require('electron-reloader')(module, {});
-      } catch (_) {
-      }
+      } catch (_) {}
       window.webContents.openDevTools();
       window.loadURL(process.env.DEBUG_URL).catch(console.log);
     } else {
@@ -179,7 +177,7 @@ class Main {
     }
   }
 
-  run () {
+  run() {
     // 保证单例
     const gotTheLock = app.requestSingleInstanceLock();
     if (!gotTheLock) {
